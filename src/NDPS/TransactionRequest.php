@@ -1,4 +1,6 @@
 <?php
+
+namespace NDPS;
 require_once 'AtomAES.php';
 
 
