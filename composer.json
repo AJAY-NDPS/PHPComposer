@@ -1,5 +1,5 @@
 {
-    "name": "ndps/php-composer",
+    "name": "ndps/php-aes-composer",
     "description": "NTT DATA Payment Services PHP Composer package.",
     "type": "library",
     "license": "MIT",
