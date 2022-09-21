@@ -1,0 +1,20 @@
+{
+    "name": "ndps/php-composer",
+    "description": "NTT DATA Payment Services PHP Composer package.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AJAY-NDPS"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+             "NDPS": "src/"
+         }
+    },
+    "require": {
+        "php": ">=5.6"
+    }
+}
