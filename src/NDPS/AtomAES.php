@@ -1,10 +1,6 @@
 <?php
 
 namespace NDPS;
-/*
- * Author  : Mr. Ankit Sharma (21/11/2018)
- * Designation/Company    : Web Developer/atom technologies ltd.
- */
 
 class AtomAES {
 

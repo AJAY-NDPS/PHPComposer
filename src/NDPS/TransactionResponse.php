@@ -53,10 +53,11 @@ class TransactionResponse {
 
     }
 
-    public function validateResponse($responseParams)
+    public function validateResponse($responseParams, $respHashKey)
     {
         $str = $responseParams["mmp_txn"].$responseParams["mer_txn"].$responseParams["f_code"].$responseParams["prod"].$responseParams["discriminator"].$responseParams["amt"].$responseParams["bank_txn"];
-        $signature =  hash_hmac("sha512",$str,$this->respHashKey,false);
+        $signature =  hash_hmac("sha512",$str,$respHashKey,false);
+
         if($signature == $responseParams["signature"]){
             return true;
         } else {

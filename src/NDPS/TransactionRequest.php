@@ -1,5 +1,4 @@
 <?php
-
 namespace NDPS;
 require_once 'AtomAES.php';
 
@@ -245,8 +244,11 @@ class TransactionRequest
     /**
      * @param string $transactionDate
      */
-    public function setTransactionDate($transactionDate)
+    public function setTransactionDate()
     {
+        date_default_timezone_set('Asia/Kolkata');
+		$datenow = date("d/m/Y h:m:s");
+		$transactionDate = str_replace(" ", "%20", $datenow);
         $this->transactionDate = $transactionDate;
     }
 
