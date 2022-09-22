@@ -1,7 +1,7 @@
 <?php
 namespace NDPS;
 require_once 'AtomAES.php';
-
+date_default_timezone_set('Asia/Kolkata');
 
 /**
  * Version 1.0
@@ -238,7 +238,7 @@ class TransactionRequest
      */
     public function getTransactionDate()
     {
-        return $this->transactionDate;
+        return $transactionDate;
     }
 
     /**
@@ -246,9 +246,6 @@ class TransactionRequest
      */
     public function setTransactionDate()
     {
-        date_default_timezone_set('Asia/Kolkata');
-		$datenow = date("d/m/Y h:m:s");
-		$transactionDate = str_replace(" ", "%20", $datenow);
         $this->transactionDate = $transactionDate;
     }
 
@@ -439,7 +436,7 @@ class TransactionRequest
         $strReqst .= "&ru=".$this->getReturnUrl();
         $strReqst .= "&clientcode=".$this->getClientCode();
         $strReqst .= "&txnid=".$this->getTransactionId();
-        $strReqst .= "&date=".$this->getTransactionDate();
+        $strReqst .= "&date=".$transactionDate;
         $strReqst .= "&udf1=".$this->getCustomerName();
         $strReqst .= "&udf2=".$this->getCustomerEmailId();
         $strReqst .= "&udf3=".$this->getCustomerMobile();
